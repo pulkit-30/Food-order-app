@@ -8,10 +8,14 @@ import Spinner from "./Components/Loaders/Spinner";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Flex from "./Components/Ui/Flex/Flex";
 function App() {
-  const [isLoading, updateLoading] = useState(true);
+  const [isLoading, updateLoading] = useState(false);
   window.addEventListener("load", () => {
     updateLoading(false);
   });
+  function displayloading() {
+    updateLoading(true);
+  }
+  function hideLoading() {}
 
   return (
     <React.Fragment>
